@@ -1,0 +1,9 @@
+version: '2'
+services:
+  mongodb:
+    image: "mongo:latest"
+    ports:
+     - "27017:27017"
+    volumes:
+     - ./mongodb/data/db:/data/db
+    command: mongod --auth
